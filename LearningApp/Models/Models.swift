@@ -16,7 +16,7 @@ struct Module: Identifiable, Decodable {
 
 struct Content: Identifiable, Decodable {
     var id: Int
-    var imgage: String
+    var image: String
     var time: String
     var description: String
     var lessons: [Lesson]
