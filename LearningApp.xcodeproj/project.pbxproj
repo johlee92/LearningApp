@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CB8157C92813221500BCC2CB /* ContentDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB8157C82813221500BCC2CB /* ContentDetailView.swift */; };
+		CB8157CC281323EE00BCC2CB /* AVKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB8157CB281323EE00BCC2CB /* AVKit.framework */; };
+		CB8157CE281324AD00BCC2CB /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB8157CD281324AD00BCC2CB /* Constants.swift */; };
+		CB8157EE28135F1700BCC2CB /* CodeTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB8157ED28135F1700BCC2CB /* CodeTextView.swift */; };
 		CBA54274281282860044192D /* HomeViewRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBA54273281282860044192D /* HomeViewRow.swift */; };
 		CBA54276281283070044192D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBA54275281283070044192D /* ContentView.swift */; };
 		CBA5427828128B950044192D /* ContentViewRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBA5427728128B940044192D /* ContentViewRow.swift */; };
@@ -21,6 +25,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		CB8157C82813221500BCC2CB /* ContentDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentDetailView.swift; sourceTree = "<group>"; };
+		CB8157CB281323EE00BCC2CB /* AVKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVKit.framework; path = System/Library/Frameworks/AVKit.framework; sourceTree = SDKROOT; };
+		CB8157CD281324AD00BCC2CB /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		CB8157ED28135F1700BCC2CB /* CodeTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeTextView.swift; sourceTree = "<group>"; };
 		CBA54273281282860044192D /* HomeViewRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewRow.swift; sourceTree = "<group>"; };
 		CBA54275281283070044192D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		CBA5427728128B940044192D /* ContentViewRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewRow.swift; sourceTree = "<group>"; };
@@ -40,17 +48,27 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CB8157CC281323EE00BCC2CB /* AVKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CB8157CA281323EE00BCC2CB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CB8157CB281323EE00BCC2CB /* AVKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		CBAB3F6428106C550055CF3A = {
 			isa = PBXGroup;
 			children = (
 				CBAB3F6F28106C550055CF3A /* LearningApp */,
 				CBAB3F6E28106C550055CF3A /* Products */,
+				CB8157CA281323EE00BCC2CB /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -92,6 +110,8 @@
 				CBA54273281282860044192D /* HomeViewRow.swift */,
 				CBA54275281283070044192D /* ContentView.swift */,
 				CBA5427728128B940044192D /* ContentViewRow.swift */,
+				CB8157C82813221500BCC2CB /* ContentDetailView.swift */,
+				CB8157ED28135F1700BCC2CB /* CodeTextView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -117,6 +137,7 @@
 			children = (
 				CBD2D9B528112C92004ECB35 /* data.json */,
 				CBD2D9B428112C92004ECB35 /* style.html */,
+				CB8157CD281324AD00BCC2CB /* Constants.swift */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -203,10 +224,13 @@
 				CBAB3F7328106C550055CF3A /* HomeView.swift in Sources */,
 				CBA54274281282860044192D /* HomeViewRow.swift in Sources */,
 				CBA54276281283070044192D /* ContentView.swift in Sources */,
+				CB8157C92813221500BCC2CB /* ContentDetailView.swift in Sources */,
 				CBAB3F7128106C550055CF3A /* LearningApp.swift in Sources */,
 				CBA5427828128B950044192D /* ContentViewRow.swift in Sources */,
+				CB8157EE28135F1700BCC2CB /* CodeTextView.swift in Sources */,
 				CBAB3F8428106CFE0055CF3A /* ContentModel.swift in Sources */,
 				CBD2D9B928112EA0004ECB35 /* Models.swift in Sources */,
+				CB8157CE281324AD00BCC2CB /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

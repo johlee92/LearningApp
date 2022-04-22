@@ -14,6 +14,11 @@ class ContentModel: ObservableObject {
     @Published var currentModule: Module?
     var currentModuleIndex = 0
     
+    @Published var currentLesson: Lesson?
+    var currentLessonIndex = 0
+    
+    @Published var lessonDescription = NSAttributedString()
+    
     var styleData: Data?
     
     init() {
@@ -65,5 +70,53 @@ class ContentModel: ObservableObject {
         }
         
         currentModule = modules[currentModuleIndex]
+    }
+    
+    func beginLesson(_ lessonIndex:Int) {
+        if lessonIndex < currentModule!.content.lessons.count {
+            currentLessonIndex = lessonIndex
+        } else {
+            currentLessonIndex = 0
+        }
+        
+        currentLesson = currentModule!.content.lessons[currentLessonIndex]
+        lessonDescription = addStyling(currentLesson!.explanation)
+    }
+    
+    func hasNextLesson() -> Bool {
+        return (currentLessonIndex + 1 < currentModule!.content.lessons.count)
+    }
+    
+    func nextLesson() {
+        currentLessonIndex += 1
+        
+        if currentLessonIndex < currentModule!.content.lessons.count {
+            currentLesson = currentModule!.content.lessons[currentLessonIndex]
+            lessonDescription = addStyling(currentLesson!.explanation)
+        } else {
+            currentLesson = nil
+            currentLessonIndex = 0
+        }
+    }
+    
+    // MARK: Styling Code
+    // Chnage string to NSAttributed string
+    private func addStyling(_ htmlString:String) -> NSAttributedString {
+        var resultString = NSAttributedString()
+        var data = Data()
+        //Add styling
+        if styleData != nil {
+            data.append(self.styleData!)
+        }
+        
+        //Add html
+        data.append(Data(htmlString.utf8))
+        
+        //convert to NSAttributed
+        if let attributedString = try? NSAttributedString(data: data, options: [.documentType: NSAttributedString.DocumentType.html], documentAttributes: nil) {
+            resultString = attributedString
+        }
+        
+        return resultString
     }
 }
