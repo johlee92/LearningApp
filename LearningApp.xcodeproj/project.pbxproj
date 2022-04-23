@@ -22,6 +22,7 @@
 		CBD2D9B628112C92004ECB35 /* style.html in Resources */ = {isa = PBXBuildFile; fileRef = CBD2D9B428112C92004ECB35 /* style.html */; };
 		CBD2D9B728112C92004ECB35 /* data.json in Resources */ = {isa = PBXBuildFile; fileRef = CBD2D9B528112C92004ECB35 /* data.json */; };
 		CBD2D9B928112EA0004ECB35 /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBD2D9B828112EA0004ECB35 /* Models.swift */; };
+		CBEAD9BC2814B2B800AE0DD2 /* RectangleCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBEAD9BB2814B2B800AE0DD2 /* RectangleCard.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,6 +42,7 @@
 		CBD2D9B428112C92004ECB35 /* style.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = style.html; sourceTree = "<group>"; };
 		CBD2D9B528112C92004ECB35 /* data.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = data.json; sourceTree = "<group>"; };
 		CBD2D9B828112EA0004ECB35 /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
+		CBEAD9BB2814B2B800AE0DD2 /* RectangleCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RectangleCard.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +114,7 @@
 				CBA5427728128B940044192D /* ContentViewRow.swift */,
 				CB8157C82813221500BCC2CB /* ContentDetailView.swift */,
 				CB8157ED28135F1700BCC2CB /* CodeTextView.swift */,
+				CBEAD9BB2814B2B800AE0DD2 /* RectangleCard.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -230,6 +233,7 @@
 				CB8157EE28135F1700BCC2CB /* CodeTextView.swift in Sources */,
 				CBAB3F8428106CFE0055CF3A /* ContentModel.swift in Sources */,
 				CBD2D9B928112EA0004ECB35 /* Models.swift in Sources */,
+				CBEAD9BC2814B2B800AE0DD2 /* RectangleCard.swift in Sources */,
 				CB8157CE281324AD00BCC2CB /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
