@@ -27,7 +27,6 @@ struct HomeView: View {
                                 destination: ContentView()
                                     .onAppear(perform: {
                                         model.beginModule(module.id)
-                                        print(model.currentContentSelected)
                                     }),
                                 tag: module.id,
                                 selection: $model.currentContentSelected,
@@ -38,8 +37,22 @@ struct HomeView: View {
                                     
                                 })
                             
+                            NavigationLink(
+                                destination: TestView()
+                                    .onAppear(perform: {
+                                        model.beginTest(module.id)
+                                    }),
+                                tag: module.id,
+                                selection: $model.currentTestSelected,
+                                label: {
                                     // Test card
                                     HomeViewRow(image: module.test.image, title: "\(module.category) test", description: module.test.description, count: "\(module.test.questions.count) questions", time: module.test.time)
+                                })
+                            
+                            // Solve for iOS 14.5 bug
+//                            NavigationLink(destination: EmptyView()) {
+//                                EmptyView()
+//                            }
                                 
                         }
                     }
