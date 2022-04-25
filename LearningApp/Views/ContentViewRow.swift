@@ -13,9 +13,17 @@ struct ContentViewRow: View {
     
     var lessonIndex:Int
     
+    var lesson: Lesson {
+        if model.currentModule != nil && lessonIndex < model.currentModule!.content.lessons.count {
+            return model.currentModule!.content.lessons[lessonIndex]
+        } else {
+            return Lesson(id: 0, title: "", video: "", duration: "", explanation: "")
+        }
+    }
+    
     var body: some View {
         
-        let lesson = model.currentModule!.content.lessons[lessonIndex]
+//        let lesson = model.currentModule!.content.lessons[lessonIndex]
         
         ZStack (alignment: .leading) {
             Rectangle()

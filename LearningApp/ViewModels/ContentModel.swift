@@ -93,7 +93,9 @@ class ContentModel: ObservableObject {
             
                 let modules = try decoder.decode([Module].self, from: data!)
                 
-                self.modules += modules
+                DispatchQueue.main.async {
+                    self.modules += modules
+                }
                 
             } catch {
                 print(error)
