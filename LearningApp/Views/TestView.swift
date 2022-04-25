@@ -62,8 +62,8 @@ struct TestView: View {
                                     
                                     Text(model.currentQuestion!.answers[index])
                                 }
+                                .padding(.horizontal, 20)
                                 .accentColor(.black)
-                                .padding()
                             }
                             .disabled(submitted)
                         }
@@ -73,10 +73,20 @@ struct TestView: View {
                 // Button
                 Button {
                     
-                    submitted = true
+                    if submitted == true {
+                        
+                        model.nextQuestion()
+                        
+                        submitted = false
+                        selectedAnswerIndex = -1
+                        
+                    } else {
+                        submitted = true
                     
-                    if selectedAnswerIndex == model.currentQuestion!.correctIndex {
-                        numCorrect += 1
+                        if selectedAnswerIndex == model.currentQuestion!.correctIndex {
+                            numCorrect += 1
+                            
+                        }
                     }
                     
                 } label: {
@@ -84,12 +94,12 @@ struct TestView: View {
                         RectangleCard(color: Color.green)
                             .frame(height: 48)
                         
-                        Text("Submit and Finish")
+                        Text(buttonText)
                             .foregroundColor(.white)
                             .bold()
                     }
+                    .padding(.horizontal, 20)
                     .accentColor(.black)
-                    .padding()
                 }
                 .disabled(selectedAnswerIndex == -1)
 
@@ -99,9 +109,26 @@ struct TestView: View {
         }
         // For some reason, need an else statement...
         // Appears to be an Xcode 14.5+ bug
+//        else if model.currentQuestion == nil && () {
+//            TestResultView()
+//        }
         else {
             // ProgressView is an UIView that shows loading
-            ProgressView()
+//            ProgressView()
+            
+            TestResultView(numCorrect: numCorrect)
+        }
+    }
+    
+    var buttonText: String {
+        if submitted == true {
+            if model.currentQuestionIndex + 1 == model.currentModule!.test.questions.count {
+                return "Finish"
+            } else {
+                return "Next"
+            }
+        } else {
+            return "Submit"
         }
     }
 }
@@ -109,5 +136,6 @@ struct TestView: View {
 struct TestView_Previews: PreviewProvider {
     static var previews: some View {
         TestView()
+            .environmentObject(ContentModel())
     }
 }

@@ -24,6 +24,7 @@
 		CBD2D9B928112EA0004ECB35 /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBD2D9B828112EA0004ECB35 /* Models.swift */; };
 		CBEAD9BC2814B2B800AE0DD2 /* RectangleCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBEAD9BB2814B2B800AE0DD2 /* RectangleCard.swift */; };
 		CBEAD9DA2814CEA500AE0DD2 /* TestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBEAD9D92814CEA500AE0DD2 /* TestView.swift */; };
+		CBEAD9DC2817045000AE0DD2 /* TestResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBEAD9DB2817045000AE0DD2 /* TestResultView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -45,6 +46,7 @@
 		CBD2D9B828112EA0004ECB35 /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
 		CBEAD9BB2814B2B800AE0DD2 /* RectangleCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RectangleCard.swift; sourceTree = "<group>"; };
 		CBEAD9D92814CEA500AE0DD2 /* TestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestView.swift; sourceTree = "<group>"; };
+		CBEAD9DB2817045000AE0DD2 /* TestResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestResultView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,6 +120,7 @@
 				CBEAD9D92814CEA500AE0DD2 /* TestView.swift */,
 				CB8157ED28135F1700BCC2CB /* CodeTextView.swift */,
 				CBEAD9BB2814B2B800AE0DD2 /* RectangleCard.swift */,
+				CBEAD9DB2817045000AE0DD2 /* TestResultView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -228,6 +231,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CBEAD9DA2814CEA500AE0DD2 /* TestView.swift in Sources */,
+				CBEAD9DC2817045000AE0DD2 /* TestResultView.swift in Sources */,
 				CBAB3F7328106C550055CF3A /* HomeView.swift in Sources */,
 				CBA54274281282860044192D /* HomeViewRow.swift in Sources */,
 				CBA54276281283070044192D /* ContentView.swift in Sources */,
