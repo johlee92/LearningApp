@@ -29,6 +29,7 @@ class ContentModel: ObservableObject {
     
     init() {
         getLocalData()
+        getRemoteData()
     }
     
     // MARK: Data Methods
@@ -62,6 +63,45 @@ class ContentModel: ObservableObject {
         } catch {
             print(error)
         }
+    }
+    
+    func getRemoteData() {
+//        let urlString = "https://johlee92.github.io/learningapp-data/data2.json"
+        let urlString = "https://codewithchris.github.io/learningapp-data/data2.json"
+        let url = URL(string: urlString)
+        
+        guard url != nil else {
+            // couldn't reutnr url
+            return
+        }
+        
+        // Create an URLRequest object
+        let request = URLRequest(url: url!)
+        
+        // Get the session and kick off the task
+        let session = URLSession.shared
+        
+        let dataTask = session.dataTask(with: request) { data, response, error in
+            // check if there's an error
+            guard error == nil else {
+                return
+            }
+            // handle the response
+            
+            do {
+                let decoder = JSONDecoder()
+            
+                let modules = try decoder.decode([Module].self, from: data!)
+                
+                self.modules += modules
+                
+            } catch {
+                print(error)
+            }
+        }
+        
+        // Kick off data task
+        dataTask.resume()
     }
     
     // MARK: Module navigation methods
